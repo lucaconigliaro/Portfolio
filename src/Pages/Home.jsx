@@ -2,7 +2,6 @@ export default function Home() {
 
     return (
         <>
-
             {/* 1 Navbar */}
             <header>
                 <div>
