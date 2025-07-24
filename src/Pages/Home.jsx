@@ -1,159 +1,142 @@
-export default function Home() {
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+function App() {
+    const [currencies, setCurrencies] = useState({});
+    const [from, setFrom] = useState("EUR");
+    const [to, setTo] = useState("USD");
+    const [amount, setAmount] = useState(1);
+    const [result, setResult] = useState(null);
+
+    // Carico le valute disponibili al primo render
+    useEffect(() => {
+        axios
+            .get("https://api.frankfurter.app/currencies")
+            .then((res) => setCurrencies(res.data))
+            .catch((err) => console.error("Errore nel caricamento valute", err));
+    }, []);
+
+    // Funzione che esegue la conversione tra due valute
+    const convert = () => {
+        // Se le valute sono uguali, restituisci l'importo stesso
+        if (from === to) {
+            setResult(Number(amount));
+            return;
+        }
+
+        axios
+            .get("https://api.frankfurter.app/latest", {
+                // Passaggio dei parametri come oggetto `params`
+                // Axios li convertirà automaticamente in una query string:
+                // es: ?amount=1&from=EUR&to=USD
+                params: {
+                    amount,
+                    from,
+                    to,
+                },
+            })
+            .then((res) => {
+                // Verifica che la risposta contenga i tassi di cambio
+                // e che esista effettivamente il tasso per la valuta di destinazione
+                if (res.data.rates && to in res.data.rates) {
+                    setResult(res.data.rates[to]);
+                } else {
+                    console.error("Tasso di cambio non trovato per", to);
+                    setResult(null);
+                }
+            })
+            .catch((err) => {
+                console.error("Errore nella conversione:", err);
+                setResult(null);
+            });
+    }
 
     return (
-        <>
-            {/* 1 Navbar */}
-            <header>
-                <div>
+        <div className="container py-4">
+            <h1 className="mb-4 text-center fw-bold">Convertitore di Valuta</h1>
 
-                    <div>
-                        <ul>
-                            <li><a href="http://">home</a></li>
-                            <li><a href="http://">aboutme</a></li>
-                            <li><a href="http://">progetti</a></li>
-                            <li><a href="http://">contattami</a></li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Github</li>
-                            <li>LinkedIn</li>
-                            <li>Gmail</li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-
-            {/* Main */}
-            <main>
-                {/* 2 Hero section */}
-                <section>
-
-                    <div>
-                        <h1>Ciao, sono Luca</h1>
-                        <p>Dopo un bootcamp fullstack intensivo, mi sono specializzato nel frontend con React. Unisco precisione tecnica e creatività, e sto ampliando le mie competenze sia lato frontend che backend, per crescere come sviluppatore completo.</p>
-
-                        <div>
-                            <button>Download CV</button>
-                            <a href="">Progetti</a>
-                        </div>
-
-                    </div>
-
-                    <div>
-                        <img src="/photos/profile.JPG" alt="" srcset="" />
-                    </div>
-
-                </section>
-
-                {/* 3 Esperienza e Carosello con i linguaggi che uso lato front */}
-                <section>
-                    <div>
-                        <p>1 anno di</p>
-                        <p>XP</p>
-                        <p>con l’ecosistema frontend più diffuso</p>
-                    </div>
-
-                    {/* Carosello con le card */}
-                    <div>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Typescript</li>
-                            <li>Bootstrap</li>
-                        </ul>
-                    </div>
-                </section>
-
-                {/* Devo ancora rifletterci */}
-                <section>
-                    <h2>"Hello World"</h2>
-                    <a href="">JavaScript</a>
-                    <a href="">React</a>
-                    {/* Da capire cosa mettere qui */}
-                    <a href="">???</a>
-                </section>
-
-                {/* 4 Sezione framework e librerie */}
-                <section>
-                    <h4>Queste sono le tecnologie che ho usato</h4>
-                    <div>
-                        {/* Colonne */}
-
-                        <div>
-                            <p>Front-End Design</p>
-                            <ul>
-                                <li>React Js</li>
-                                <li>Vite</li>
-                                <li>Figma</li>
-                                <li>Jest</li>
-                                <li>Bootstrap</li>
-                                <li>Tailwind</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <p>Linguaggi</p>
-                            <ul>
-                                <li>JavaScript</li>
-                                <li>TypeScript</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <p>Devops</p>
-                            <ul>
-                                <li>Github</li>
-                                <li>Vercel</li>
-                                <li></li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <p>Back-end</p>
-                            <ul>
-                                <li>MySql2</li>
-                                <li>Postman</li>
-                                <li>Node.js</li>
-                                <li>Express.js</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <p>In progress</p>
-                            <ul>
-                                <li>PHP</li>
-                                <li>Laravel</li>
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </section>
-            </main>
-
-            {/* 5 Footer */}
-            <footer>
-                {/* Prima riga */}
-                <div>
-                    <div>
-                        <p>Contattami</p>
-                    </div>
-
-                    <div>
-                        <ul>
-                            <li>Github</li>
-                            <li>LinkedIn</li>
-                            <li>Gmail</li>
-                        </ul>
-                    </div>
+            <div className="card shadow-sm p-4 mb-4 mx-auto" style={{ maxWidth: 480 }}>
+                {/* Input importo */}
+                <div className="mb-3">
+                    <label htmlFor="amount" className="form-label fw-semibold">
+                        Importo
+                    </label>
+                    <input
+                        id="amount"
+                        type="number"
+                        min="0"
+                        step="any"
+                        className="form-control"
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                        placeholder="Inserisci importo"
+                    />
                 </div>
 
-                {/* Seconda riga */}
-                <p>LucaConigliaro 2025</p>
+                {/* Selezione valute */}
+                <div className="d-flex align-items-center mb-3 gap-2">
+                    {/* Select valuta di partenza */}
+                    <select
+                        className="form-select flex-grow-1"
+                        value={from}
+                        onChange={(e) => setFrom(e.target.value)}
+                        aria-label="Valuta da convertire"
+                    >
+                        {Object.entries(currencies).map(([code, name]) => (
+                            <option key={code} value={code}>
+                                {code} - {name}
+                            </option>
+                        ))}
+                    </select>
 
-            </footer>
-        </>
-    )
+                    {/* Pulsante inversione valute */}
+                    <button
+                        type="button"
+                        className="btn btn-outline-secondary"
+                        title="Inverti valute"
+                        onClick={() => {
+                            const temp = from;
+                            setFrom(to);
+                            setTo(temp);
+                            setResult(null); // Reset del risultato
+                        }}
+                    >
+                        ↔
+                    </button>
+
+                    {/* Select valuta di destinazione */}
+                    <select
+                        className="form-select flex-grow-1"
+                        value={to}
+                        onChange={(e) => setTo(e.target.value)}
+                        aria-label="Valuta in cui convertire"
+                    >
+                        {Object.entries(currencies).map(([code, name]) => (
+                            <option key={code} value={code}>
+                                {code} - {name}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+
+                {/* Bottone per convertire */}
+                <button
+                    type="button"
+                    className="btn btn-primary w-100"
+                    onClick={convert}
+                >
+                    Converti
+                </button>
+
+                {/* Risultato della conversione */}
+                {result !== null && (
+                    <div className="alert alert-success mt-3 mb-0 text-center fs-5 fw-semibold">
+                        {amount} {from} = {result.toFixed(2)} {to}
+                    </div>
+                )}
+            </div>
+        </div>
+    );
 }
+
+export default App;
