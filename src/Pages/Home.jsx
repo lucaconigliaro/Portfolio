@@ -4,7 +4,7 @@ export default function Home() {
         <>
 
             {/* Main */}
-            <main>
+            <main className="">
                 {/* 2 Hero section */}
                 <section>
 

@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 
 export default function DefaultLayout() {
     return (
-        <div>
+        <div className="container">
             <Navbar />
             <Outlet />
             <Footer />
