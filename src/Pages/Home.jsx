@@ -1,37 +1,18 @@
-import { Link } from "react-router-dom";
+import Hero from "../Components/Hero";
 
 export default function Home() {
-
     return (
         <>
-
             {/* Main */}
-            <main className="">
+            <main>
                 {/* 2 Hero section */}
-                <section className="presentation-section">
-
-                    <div className="presentation-card">
-                        <h1>Ciao, sono Luca</h1>
-                        <p>Dopo un bootcamp fullstack intensivo, mi sono specializzato nel frontend con React. Unisco precisione tecnica e creatività, e sto ampliando le mie competenze sia lato frontend che backend, per crescere come sviluppatore completo.</p>
-
-                        <div className="presentation-links">
-                            <button className="btn-cv">Download CV</button>
-                            <Link to="/projects" className="btn-projects">Progetti</Link>
-                        </div>
-
-                    </div>
-
-                    <div className="presentation-img">
-                        <img src="/photos/profile.JPG" alt=""/>
-                    </div>
-
-                </section>
+               <Hero />
 
                 {/* 3 Esperienza e Carosello con i linguaggi che uso lato front */}
                 <section>
-                    <div>
+                    <div className="xp-Section">
                         <p>1 anno di</p>
-                        <p>XP</p>
+                        <p className="xp">XP</p>
                         <p>con l’ecosistema frontend più diffuso</p>
                     </div>
 
@@ -112,7 +93,6 @@ export default function Home() {
 
                 </section>
             </main>
-
         </>
-    )
+    );
 }

@@ -47,7 +47,6 @@ body {
     gap: 2rem;
 }
 
-
 header .links {
     display: flex;
     gap: 1rem;
@@ -110,6 +109,33 @@ main .presentation-section .btn-projects {
     color: white;
 }
 
+/* FrontSection */
+main .xp-Section{
+    max-width: 30%;
+    margin-bottom: 5rem;
+    position: relative;
+    padding: 2rem;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+main .xp-Section::before {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 80%);
+    filter: blur(40px);
+    border-radius: 40px;
+    z-index: -1;
+}
+
+main .xp-Section .xp{
+    font-size: 5rem;
+}
+
 /* FOOTER */
 .footer-up {
     margin-top: 2rem;
@@ -138,6 +164,3 @@ footer .footer-down {
     padding: 1rem;
     font-size: .8rem;
 }
-
-
- 

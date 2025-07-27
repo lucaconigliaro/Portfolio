@@ -1,7 +1,5 @@
 export default function Footer() {
-
     return (
-        <>
             <footer>
                 {/* Prima riga */}
                 <div className="footer-up">
@@ -32,9 +30,10 @@ export default function Footer() {
                 </div>
 
                 {/* Seconda riga */}
-                <p className="footer-down">LucaConigliaro 2025</p>
+                <div className="footer-down">
+                    <p>LucaConigliaro 2025</p>
+                </div>
 
             </footer>
-        </>
-    )
+    );
 }

@@ -1,5 +1,4 @@
 export default function FrontSection() {
-
     return (
         <>
             <section>
@@ -20,5 +19,5 @@ export default function FrontSection() {
                 </div>
             </section>
         </>
-    )
+    );
 }
