@@ -1,3 +1,4 @@
+import FrontSection from "../Components/FrontSection";
 import Hero from "../Components/Hero";
 
 export default function Home() {
@@ -6,26 +7,10 @@ export default function Home() {
             {/* Main */}
             <main>
                 {/* 2 Hero section */}
-               <Hero />
+                <Hero />
 
                 {/* 3 Esperienza e Carosello con i linguaggi che uso lato front */}
-                <section>
-                    <div className="xp-Section">
-                        <p>1 anno di</p>
-                        <p className="xp">XP</p>
-                        <p>con l’ecosistema frontend più diffuso</p>
-                    </div>
-
-                    {/* Carosello con le card */}
-                    <div>
-                        <ul>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>Typescript</li>
-                            <li>Bootstrap</li>
-                        </ul>
-                    </div>
-                </section>
+                <FrontSection />
 
                 {/* Devo ancora rifletterci */}
                 <section>
@@ -90,7 +75,6 @@ export default function Home() {
                         </div>
 
                     </div>
-
                 </section>
             </main>
         </>

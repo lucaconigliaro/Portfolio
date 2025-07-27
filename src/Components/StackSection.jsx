@@ -55,8 +55,7 @@ export default function StackSection() {
                     </div>
 
                 </div>
-
             </section>
         </>
-    )
+    );
 }

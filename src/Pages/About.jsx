@@ -1,5 +1,4 @@
 export default function About() {
-
     return (
         <>
             <div>
@@ -22,5 +21,5 @@ export default function About() {
             </ul>
             <p>Se vuoi darmi fiducia, scrivimi!</p>
         </>
-    )
+    );
 }
