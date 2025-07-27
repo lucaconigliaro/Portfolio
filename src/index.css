@@ -26,9 +26,40 @@ body {
 
 /* LAYOUT */
 .container {
-    width: 1100px;
+    max-width: 1100px;
+    width: 100%;
     margin: 0 auto;
     padding: 2rem ;
 }
 
 /* NAVBAR */
+.navbar {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #131315;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #9F83E4 ;
+    margin-bottom: 2rem;
+}
+
+
+header .links {
+    display: flex;
+    gap: 1rem;
+}
+
+header .social-icons {
+    display: flex;
+    gap: .3rem;
+}
+
+header .social-icons img {
+  height: 1em;       /* altezza uguale a quella del testo */
+  width: auto;       /* mantiene le proporzioni */
+  vertical-align: middle;  /* allinea bene col testo */
+  color: #9F83E4;
+}
