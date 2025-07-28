@@ -1,6 +1,9 @@
+import Carousel from "./Carousel";
+
 export default function FrontSection() {
+
     return (
-        <section>
+        <section className="front-section">
             <div className="xp-Section">
                 <p>1 anno di</p>
                 <p className="xp">XP</p>
@@ -8,14 +11,7 @@ export default function FrontSection() {
             </div>
 
             {/* Carosello con le card */}
-            <div>
-                <ul>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Typescript</li>
-                    <li>Bootstrap</li>
-                </ul>
-            </div>
+           <Carousel />
         </section>
     );
 }
