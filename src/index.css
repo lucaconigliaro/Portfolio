@@ -18,10 +18,10 @@ ul {
     list-style: none;
 }
 
-
 body {
     background-color: black;
     color: white;
+    padding-top: 8rem;
 }
 
 /* LAYOUT */
@@ -45,6 +45,15 @@ body {
     color: #9F83E4 ;
     margin-bottom: 2rem;
     gap: 2rem;
+    position: fixed;
+    z-index: 999;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(19, 19, 21, 0.5);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+animation: slideDownFadeIn 0.6s ease forwards;
 }
 
 header .links {
@@ -217,3 +226,15 @@ footer .footer-down {
     padding: 1rem;
     font-size: .8rem;
 }
+
+
+@keyframes slideDownFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
