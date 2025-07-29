@@ -13,12 +13,10 @@ export default function Home() {
                 <FrontSection />
 
                 {/* Devo ancora rifletterci */}
-                <section>
-                    <h2>"Hello World"</h2>
-                    <a href="">JavaScript</a>
-                    <a href="">React</a>
-                    {/* Da capire cosa mettere qui */}
-                    <a href="">???</a>
+                <section className="language-section">
+                    <p>JavaScript</p>
+                    <p>React</p>
+                    <p>Coffee</p>
                 </section>
 
                 {/* 4 Sezione framework e librerie */}
