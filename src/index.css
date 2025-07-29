@@ -158,8 +158,9 @@ main .carousel-container {
     background-color: black;
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    overflow: auto;
     gap: 2rem;
+    width: 40rem;
 }
 
 main .carousel-item {
