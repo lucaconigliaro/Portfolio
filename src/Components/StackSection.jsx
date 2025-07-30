@@ -1,16 +1,12 @@
 export default function StackSection() {
-
     return (
-        <>
-            <section>
-                <h4>Queste sono le tecnologie che ho usato</h4>
-                <div>
-                    {/* Colonne */}
-
-                    <div>
-                        <p>Front-End Design</p>
+        <section className="tech-section full-width-breakout">
+            <div className="tech-container">
+                <div className="tech-row">
+                    <div className="tech-col">
+                        <h5>Front-end Engineer Design</h5>
                         <ul>
-                            <li>React Js</li>
+                            <li>React</li>
                             <li>Vite</li>
                             <li>Figma</li>
                             <li>Jest</li>
@@ -19,43 +15,41 @@ export default function StackSection() {
                         </ul>
                     </div>
 
-                    <div>
-                        <p>Linguaggi</p>
+                    <div className="tech-col">
+                        <h5>Languages</h5>
                         <ul>
                             <li>JavaScript</li>
                             <li>TypeScript</li>
                         </ul>
                     </div>
 
-                    <div>
-                        <p>Devops</p>
+                    <div className="tech-col">
+                        <h5>DevOps</h5>
                         <ul>
-                            <li>Github</li>
+                            <li>GitHub</li>
                             <li>Vercel</li>
-                            <li></li>
                         </ul>
                     </div>
 
-                    <div>
-                        <p>Back-end</p>
+                    <div className="tech-col">
+                        <h5>Back-end</h5>
                         <ul>
-                            <li>MySql2</li>
-                            <li>Postman</li>
                             <li>Node.js</li>
                             <li>Express.js</li>
+                            <li>Postman</li>
+                            <li>MySql2</li>
                         </ul>
                     </div>
 
-                    <div>
-                        <p>In progress</p>
+                    <div className="tech-col">
+                        <h5>Next Step</h5>
                         <ul>
                             <li>PHP</li>
                             <li>Laravel</li>
                         </ul>
                     </div>
-
                 </div>
-            </section>
-        </>
+            </div>
+        </section>
     );
 }
