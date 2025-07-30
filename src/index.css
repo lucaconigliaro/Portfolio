@@ -110,6 +110,7 @@ main .presentation-section .btn-cv {
     border: solid 1px #9F83E4;
     border-radius: 20px;
     padding: .5rem;
+    background-color: white;
 }
 
 main .presentation-section .btn-projects {
@@ -148,6 +149,7 @@ main .xp-Section::before {
     filter: blur(120px);
     border-radius: 1000px;
     z-index: -1;
+    pointer-events: none;
 }
 
 main .xp-Section .xp {
@@ -479,3 +481,4 @@ footer .footer-down {
         font-size: 2rem;
     }
 }
+
