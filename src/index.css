@@ -565,13 +565,17 @@ footer .footer-down {
         display: none;
       }
       
+      main .presentation-section .presentation-links {
+        margin-bottom: 1rem;
+      }
+     
       main .xp-Section::before {
         top: -90px;
         left: -40px;
         right: -90px;
         bottom: -90px;
       }
-      
+
     main .carousel-item {
         min-width: 30%;
         height: 8rem;
