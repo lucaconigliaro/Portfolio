@@ -482,6 +482,7 @@ footer .footer-down {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        gap: 2rem;
     }
 
     main .presentation-card {
@@ -499,6 +500,10 @@ footer .footer-down {
         align-items: center;
     }
 
+     main .presentation-section .presentation-links {
+        margin-bottom: 1rem;
+      }
+
     main .xp-Section::before {
         top: -120px;
         left: -60px;
@@ -507,7 +512,6 @@ footer .footer-down {
       }
 
     main .front-section {
-        flex-direction: column;
         gap: 2rem;
     }
 
@@ -518,6 +522,7 @@ footer .footer-down {
 
     main .carousel-item {
         height: 9rem;
+        min-width: 13rem;
         padding: 0.8rem;
         font-size: 0.6rem;
     }
@@ -563,10 +568,6 @@ footer .footer-down {
     
       .navbar .social-icons {
         display: none;
-      }
-      
-      main .presentation-section .presentation-links {
-        margin-bottom: 1rem;
       }
      
       main .xp-Section::before {
