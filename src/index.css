@@ -412,6 +412,12 @@ footer .footer-down {
         gap: 1rem;
         text-align: center;
     }
+    main .xp-Section::before {
+        top: -180px;
+        left: -100px;
+        right: -180px;
+        bottom: -180px;
+      }
 
     main .presentation-card {
         max-width: 100%;
@@ -493,6 +499,13 @@ footer .footer-down {
         align-items: center;
     }
 
+    main .xp-Section::before {
+        top: -120px;
+        left: -60px;
+        right: -120px;
+        bottom: -120px;
+      }
+
     main .front-section {
         flex-direction: column;
         gap: 2rem;
@@ -550,6 +563,13 @@ footer .footer-down {
     
       .navbar .social-icons {
         display: none;
+      }
+      
+      main .xp-Section::before {
+        top: -90px;
+        left: -40px;
+        right: -90px;
+        bottom: -90px;
       }
       
     main .carousel-item {
