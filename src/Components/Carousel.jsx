@@ -2,20 +2,21 @@ import { useEffect, useState } from "react";
 
 export default function Carousel() {
     const data = [
-        { name: "JavaScript", logo: "/src/assets/logos/JavaScript.png" },
+        { name: "JavaScript", logo: "/src/assets/logos/JavaScript.white.png" },
         { name: "React", logo: "src/assets/logos/React.png" },
+        { name: "Vite", logo: "/src/assets/logos/Vite.svg" },
         { name: "TypeScript", logo: "/src/assets/logos/TypeScript.png" },
         { name: "Bootstrap", logo: "/src/assets/logos/Bootstrap.png" },
         { name: "Tailwind", logo: "/src/assets/logos/Tailwind.png" },
     ];
 
     const bgColors = {
-        JavaScript: "#C3C89F",   // verde acido desaturato
-        React: "#7E9CA6",        // azzurro polveroso
-        TypeScript: "#8DA7C2",   // blu-grigio pastello
-        Bootstrap: "#9B8BB0",    // lilla spento, elegante
-        Tailwind: "#88C4D9",     // azzurro chiaro, soft
-        Vite: "#9A9ECB"          // viola/blu desaturato
+        JavaScript: "#C3C89F",
+        React: "#7E9CA6",
+        TypeScript: "#8DA7C2",
+        Bootstrap: "#9B8BB0",
+        Tailwind: "#88C4D9",
+        Vite: "#9A9ECB"
     };
 
     const [currentIndex, setCurrentIndex] = useState(0);
