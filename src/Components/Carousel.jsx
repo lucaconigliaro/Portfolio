@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 
 export default function Carousel() {
     const data = [
-        { name: "JavaScript", logo: "/src/assets/logos/JavaScript.white.png" },
-        { name: "React", logo: "src/assets/logos/React.png" },
-        { name: "Vite", logo: "/src/assets/logos/Vite.svg" },
-        { name: "TypeScript", logo: "/src/assets/logos/TypeScript.png" },
-        { name: "Bootstrap", logo: "/src/assets/logos/Bootstrap.png" },
-        { name: "Tailwind", logo: "/src/assets/logos/Tailwind.png" },
+        { name: "JavaScript", logo: "/logos/JavaScript.white.png" },
+        { name: "React", logo: "/logos/React.png" },
+        { name: "Vite", logo: "/logos/Vite.svg" },
+        { name: "TypeScript", logo: "/logos/TypeScript.png" },
+        { name: "Bootstrap", logo: "/logos/Bootstrap.png" },
+        { name: "Tailwind", logo: "/logos/Tailwind.png" },
     ];
 
     const bgColors = {

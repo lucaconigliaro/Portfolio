@@ -16,17 +16,17 @@ export default function Navbar() {
                 <ul className="social-icons">
                     <li>
                         <a href="https://github.com/lucaconigliaro" target="_blank" rel="noopener noreferrer">
-                            <img src="src/assets/logos/Group.png" alt="GitHub" />
+                            <img src="/logos/Group.png" alt="GitHub" />
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/luca-conigliaro-5636b1352/" target="_blank" rel="noopener noreferrer">
-                            <img src="src/assets/logos/linkedin-plain.png" alt="LinkedIn" />
+                            <img src="/logos/linkedin-plain.png" alt="LinkedIn" />
                         </a>
                     </li>
                     <li>
                         <a href="mailto:lucaconigliaro1@gmail.com">
-                            <img src="src/assets/logos/Group2.png" alt="Gmail" />
+                            <img src="/logos/Group2.png" alt="Gmail" />
                         </a>
                     </li>
                 </ul>
