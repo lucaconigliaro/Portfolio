@@ -582,4 +582,9 @@ footer .footer-down {
     main .language-section {
         font-size: 2rem;
     }
+
+    main .tech-row {
+        flex-direction: column;
+        align-items: center;
+    }
 }
