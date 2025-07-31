@@ -406,12 +406,6 @@ footer .footer-down {
         gap: 2rem;
     }
 
-    main .presentation-section {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        text-align: center;
-    }
     main .xp-Section::before {
         top: -180px;
         left: -100px;
@@ -419,18 +413,9 @@ footer .footer-down {
         bottom: -180px;
       }
 
-    main .presentation-card {
-        max-width: 100%;
-    }
-
     main .presentation-section img {
         margin-right: 0;
         max-width: 8rem;
-    }
-
-    main .presentation-section .presentation-links {
-        display: block;
-        align-items: center;
     }
 
     main .front-section {
@@ -540,10 +525,6 @@ footer .footer-down {
         font-size: 2.5rem;
     }
 
-    main .tech-row {
-        flex-direction: column;
-        align-items: center;
-    }
 
     main .tech-col {
         width: 30%;
