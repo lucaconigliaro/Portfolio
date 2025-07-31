@@ -106,7 +106,7 @@ main .presentation-card strong {
 }
 
 main .presentation-img {
-    width: 220px;
+    min-width: 220px;
     height: 220px;
     border-radius: 50%;
     background-image: url('/photos/profile2.png');
@@ -418,13 +418,6 @@ footer .footer-down {
         max-width: 8rem;
     }
 
-    main .front-section {
-        flex-direction: column;
-        gap: 3rem;
-        align-items: center;
-        text-align: center;
-    }
-
     main .carousel-container {
         width: 100%;
         padding: 0 1rem;
@@ -455,39 +448,13 @@ footer .footer-down {
 }
 
 /* MEDIA QUERY: Mobile (max 768px) */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 479px){
     .navbar {
         width: auto;
         padding: 1rem 1.5rem;
         gap: 2rem;
         font-size: .8rem;
     }
-
-    main .presentation-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 2rem;
-    }
-
-    main .presentation-card {
-        max-width: 100%;
-    }
-
-    main .presentation-section img {
-        margin: 0 auto;
-        max-width: 7rem;
-    }
-
-    main .presentation-links {
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
-    }
-
-     main .presentation-section .presentation-links {
-        margin-bottom: 1rem;
-      }
 
     main .xp-Section::before {
         top: -120px;
@@ -545,6 +512,32 @@ footer .footer-down {
         justify-content: center;
         padding: 0.8rem;
         gap: 0.5rem;
+      }
+
+      main .presentation-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    main .presentation-card {
+        max-width: 100%;
+    }
+
+    main .presentation-section img {
+        margin: 0 auto;
+        max-width: 7rem;
+    }
+
+    main .presentation-links {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+     main .presentation-section .presentation-links {
+        margin-bottom: 1rem;
       }
     
       .navbar .social-icons {
