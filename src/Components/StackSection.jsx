@@ -55,7 +55,7 @@ export default function StackSection() {
                         <h5>DevOps</h5>
                         <ul>
                             <li className="img-lang">
-                                <div className="logo-wrapper"><img src="src/assets/logos/GitHub.png" alt="GitHub" /></div>
+                                <div className="logo-wrapper"><img src="src/assets/logos/github-original.png" alt="GitHub" /></div>
                                 <span>GitHub</span>
                             </li>
                             <li className="img-lang">

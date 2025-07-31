@@ -11,17 +11,17 @@ export default function Footer() {
                     <ul className="social-icons">
                         <li>
                             <a href="https://github.com/lucaconigliaro" target="_blank" rel="noopener noreferrer">
-                                <img src="src/assets/logos/GitHub.png" alt="GitHub" />
+                                <img src="src/assets/logos/Group.png" alt="GitHub" />
                             </a>
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/luca-conigliaro-5636b1352/" target="_blank" rel="noopener noreferrer">
-                                <img src="src/assets/logos/LinkedIn.png" alt="LinkedIn" />
+                                <img src="src/assets/logos/linkedin-plain.png" alt="LinkedIn" />
                             </a>
                         </li>
                         <li>
                             <a href="mailto:lucaconigliaro1@gmail.com">
-                                <img src="src/assets/logos/gmail-new.png" alt="Gmail" />
+                                <img src="src/assets/logos/Group2.png" alt="Gmail" />
                             </a>
                         </li>
                     </ul>
@@ -31,8 +31,7 @@ export default function Footer() {
 
             {/* Seconda riga */}
             <div className="footer-down">
-                <p>LucaConigliaro 2025</p>
-            </div>
+                <p>&copy; Luca Conigliaro 2025</p>            </div>
         </footer>
     );
 }

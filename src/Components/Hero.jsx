@@ -17,7 +17,7 @@ export default function Hero() {
             <section className="presentation-section">
                 <div className="presentation-card">
                     <h1>Ciao, sono Luca</h1>
-                    <p>Dopo un bootcamp fullstack intensivo, mi sono specializzato nel frontend con React. Unisco precisione tecnica e creatività, e sto ampliando le mie competenze sia lato frontend che backend, per crescere come sviluppatore completo.</p>
+                    <p>Dopo un bootcamp <strong>fullstack intensivo</strong>, mi sono specializzato nel <strong>frontend</strong> con <strong>React</strong>. Unisco precisione tecnica e creatività, e sto ampliando le mie competenze sia lato frontend che backend, per crescere come sviluppatore completo.</p>
 
                     <div className="presentation-links">
                         <a
@@ -36,7 +36,6 @@ export default function Hero() {
                 </div>
 
                 <div className="presentation-img">
-                    <img src="/photos/profile.JPG" alt="" />
                 </div>
 
                 <ToastContainer />

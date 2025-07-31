@@ -44,7 +44,7 @@ export default function Carousel() {
                         }}
                     >
                         <img src={item.logo} alt={item.name} style={{ width: "50px", height: "50px", marginBottom: "1rem" }} />
-                        <h1 className="text-2xl font-bold">{item.name}</h1>
+                        <h1>{item.name}</h1>
                     </div>
                 ))}
             </div>

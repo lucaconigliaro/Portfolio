@@ -21,7 +21,7 @@ export default function Home() {
                 </section>
 
                 {/* 4 Sezione framework e librerie */}
-                <h2>These are the technologies that I’ve been using</h2>
+                <h2 className="stack-presentation">These are the technologies that I’ve been using</h2>
                 <StackSection />
             </main>
         </>

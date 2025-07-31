@@ -6,7 +6,7 @@
 }
 
 img {
-    max-width: 100px;
+    max-width: 200px;
 }
 
 a {
@@ -22,6 +22,8 @@ body {
     background-color: black;
     color: white;
     padding-top: 8rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
 }
 
 /* LAYOUT */
@@ -85,19 +87,47 @@ main .presentation-section {
 main .presentation-card h1 {
     color: white;
     margin-bottom: 1rem;
+    font-weight: normal; 
 }
 
 main .presentation-card {
     max-width: 50%;
     color: #424244;
+    font-weight: 300;
 }
 
-main .presentation-section img {
-    border-radius: 1rem;
-    max-width: 10rem;
-    margin-right: 200px;
+main .presentation-card strong {
+    color: #717171;
 }
 
+main .presentation-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-image: url('/photos/profile2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow:
+      0 0 25px rgba(0, 255, 255, 0.3),
+      0 0 60px rgba(255, 0, 255, 0.15),
+      0 0 10px rgba(255, 255, 255, 0.1) inset;
+    filter: drop-shadow(0 0 4px #424244) drop-shadow(0 0 6px #9F83E4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  main .presentation-img:hover {
+    transform: scale(1.08) rotate(0.5deg);
+    box-shadow:
+      0 0 30px rgba(0, 255, 255, 0.5),
+      0 0 70px rgba(255, 0, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.15) inset;
+  }
+  
 main .presentation-section .presentation-links {
     padding: 10px;
     display: flex;
@@ -111,6 +141,8 @@ main .presentation-section .btn-cv {
     border-radius: 20px;
     padding: .5rem;
     background-color: white;
+    font-size: .9rem;
+    font-weight: 500;
 }
 
 main .presentation-section .btn-projects {
@@ -122,8 +154,7 @@ main .presentation-section .btn-projects {
 /* FrontSection */
 main .front-section {
     display: flex;
-    justify-content: space-around;
-    gap: 15rem;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 5rem;
 }
@@ -136,6 +167,8 @@ main .xp-Section {
     border-radius: 20px;
     z-index: 1;
     font-size: .8rem;
+    color: #424244;
+    font-weight: normal;
 }
 
 main .xp-Section::before {
@@ -154,6 +187,8 @@ main .xp-Section::before {
 
 main .xp-Section .xp {
     font-size: 5rem;
+    color: white;
+    font-weight: bold;
 }
 
 /* Carousel */
@@ -161,14 +196,15 @@ main .carousel-container {
     background-color: black;
     display: flex;
     flex-wrap: nowrap;
-    overflow: auto;
+    overflow: hidden;
     gap: 2rem;
     width: 40rem;
+    padding-top: 4rem ;
 }
 
 main .carousel-item {
-    height: 15rem;
-    min-width: 20rem;
+    height: 13rem;
+    min-width: 18rem;
     width: 30%;
     border-radius: 15%;
     display: flex;
@@ -210,6 +246,7 @@ main .language-section {
     gap: 3rem;
     padding-bottom: 4rem;
     font-size: 5rem;
+    font-weight: bold;
 }
 
 main .language-section p:first-child {
@@ -226,6 +263,10 @@ main .language-section p:last-child {
 
 
 /* Stack section */
+main .stack-presentation {
+    color: #C8C8C8;
+    font-weight: lighter;
+}
 main .full-width-breakout {
     position: relative;
     left: 50%;
@@ -259,6 +300,7 @@ main .tech-col {
 main .tech-col h5 {
     font-size: 1rem;
     margin-bottom: 1rem;
+    font-weight: lighter;
 }
 
 main .tech-col ul {
@@ -304,7 +346,7 @@ main .img-lang span {
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    color: #9F83E4;
+    color: #B4B4B4;
     gap: 2rem;
 }
 
@@ -323,8 +365,21 @@ footer .social-icons img {
 footer .footer-down {
     padding: 1rem;
     font-size: .8rem;
+    color: #B4B4B4;
 }
 
+/* KEYFRAMES */
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
 
 @keyframes slideDownFadeIn {
     0% {
@@ -384,10 +439,8 @@ footer .footer-down {
 
     main .carousel-item {
         min-width: 20%;
-        height: 6rem;
+        height: 10rem;
         padding: 1rem;
-        color: transparent;
-        font-size: 0.1rem;
         border-radius: 10%;
     }
 
@@ -448,10 +501,9 @@ footer .footer-down {
     }
 
     main .carousel-item {
-        min-width: 35%;
         height: 9rem;
         padding: 0.8rem;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
     }
 
     main .dot {
@@ -493,6 +545,15 @@ footer .footer-down {
 
     main .carousel-container {
         gap: 0.5rem;
+    }
+
+    main .carousel-item {
+        min-width: 20%;
+        height: 6rem;
+        padding: 1rem;
+        font-size: .1rem;
+        color: transparent;
+        border-radius: 10%;
     }
 
     main .dot {
