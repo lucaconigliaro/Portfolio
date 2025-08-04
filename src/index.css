@@ -395,13 +395,11 @@ footer .footer-down {
     justify-content: center;
 }
 
-/* Spaziatura paragrafi */
 .about-me p {
     margin-top: .3rem;
     margin-bottom: 1.2rem;
 }
 
-/* LAYOUT A DUE COLONNE */
 .about-columns {
     display: flex;
     justify-content: space-between;
@@ -409,17 +407,11 @@ footer .footer-down {
     flex-wrap: wrap;
 }
 
-/* Colonna testo */
 .about-me {
     flex: 1 1 50%;
     z-index: 2;
 }
 
-.short p {
-    margin: 1rem;
-}
-
-/* Colonna immagine */
 .about-image {
     flex: 1 1 45%;
     min-height: 400px;
@@ -431,6 +423,29 @@ footer .footer-down {
     filter: grayscale(100%) blur(2px) brightness(1.2);
     opacity: 0.6;
 }
+
+.short p {
+    margin: 1rem;
+    margin-top: 3rem;
+}
+
+.short ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    margin: 1rem 0;
+    font-size: .9rem;
+  }
+  
+  .short li {
+    line-height: 1.2;
+  }
+
+  .short .trust {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {

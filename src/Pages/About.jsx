@@ -50,12 +50,12 @@ export default function About() {
             <div className="short">
                 <p><strong>Un piccolo riassunto per chi odia leggere i papiri:</strong></p>
                 <ul>
-                    <li>Ex barista diventato dev (il codice stressa di meno)</li>
-                    <li>Specializzato in frontend, amante del codice bello pulito</li>
-                    <li>Sto studiando anche backend: la fame di imparare non manca</li>
-                    <li>Aperto a stage, tirocini, apprendistato o ruoli junior — su Roma o da remoto</li>
+                    <li>- Ex barista diventato dev (il codice stressa di meno)</li>
+                    <li>- Specializzato in frontend, amante del codice pulito</li>
+                    <li>- Sto studiando anche backend: la fame di imparare non manca</li>
+                    <li>- Aperto a stage, tirocini, apprendistato o ruoli junior — su Roma o da remoto</li>
                 </ul>
-                <p>Se vuoi darmi fiducia, scrivimi!</p>
+                <p className="trust">Se vuoi darmi fiducia, scrivimi!</p>
             </div>
         </section>
     );
