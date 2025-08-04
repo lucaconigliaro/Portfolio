@@ -42,7 +42,6 @@ body {
 
 /* NAVBAR */
 .navbar {
-    width: 40%;
     margin: 0 auto;
     background-color: #131315;
     padding: 1rem;
@@ -52,7 +51,7 @@ body {
     align-items: center;
     color: #9F83E4;
     margin-bottom: 2rem;
-    gap: 2rem;
+    gap: 4rem;
     position: fixed;
     z-index: 999;
     top: 2rem;
@@ -583,7 +582,7 @@ footer .footer-down {
 /* MEDIA QUERY: Tablet (max 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
     .navbar {
-        width: auto%;
+        width: auto;
         justify-content: center;
         gap: 2rem;
     }
@@ -637,6 +636,8 @@ footer .footer-down {
         gap: 2rem;
         font-size: .8rem;
     }
+
+    
 
     main .xp-Section::before {
         top: -120px;
