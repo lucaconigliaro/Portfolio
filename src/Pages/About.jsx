@@ -5,7 +5,6 @@ export default function About() {
                 <p className="about-btn">about me</p>
             </div>
 
-            {/* Nuovo contenitore per dividere testo e immagine */}
             <div className="about-columns">
                 <div className="about-me">
                     <h1>Curiosi di sapere qualcosa su di me?</h1>
@@ -15,11 +14,11 @@ export default function About() {
                     </p>
 
                     <p>
-                        Dopo aver lavorato per sei anni come barista e un anno in fabbrica — a stretto contatto con le persone e anche in ambienti frenetici e sotto pressione — ho deciso di cambiare radicalmente vita. A 29 anni ho fatto una scelta coraggiosa: investire in me stesso, partendo da zero, e intraprendere un nuovo percorso nel mondo dello sviluppo web.
+                        Dopo aver lavorato per sei anni come barista e un anno in fabbrica, a stretto contatto con le persone e anche in ambienti frenetici e sotto pressione, ho deciso di cambiare radicalmente vita. A 29 anni ho fatto una scelta coraggiosa: investire in me stesso, partendo da zero, e intraprendere un nuovo percorso nel mondo dello sviluppo web.
                     </p>
 
                     <p>
-                        Ho seguito un corso intensivo di 700 ore con Boolean per diventare fullstack developer, per poi specializzarmi ulteriormente sul frontend. In particolare, ho approfondito React, JavaScript avanzato e le basi di TypeScript. Attualmente mi sto aprendo anche al mondo del backend, con l’obiettivo di imparare PHP e Laravel, perché credo che la versatilità sia una risorsa preziosa.
+                        Ho seguito un corso intensivo di 700 ore con Boolean per diventare fullstack developer, per poi specializzarmi ulteriormente sul frontend. In particolare, ho approfondito React, JavaScript avanzato e le basi di TypeScript. Ma sono interessato anche al backend, ho l’obiettivo di imparare PHP e Laravel, perché credo che la versatilità sia una risorsa preziosa.
                     </p>
 
                     <p>
@@ -43,7 +42,6 @@ export default function About() {
                     </p>
                 </div>
 
-                {/* Immagine sul lato destro */}
                 <div className="about-image"></div>
             </div>
 
