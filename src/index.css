@@ -459,14 +459,12 @@ footer .footer-down {
     }
 }
 
-
 /*  PROJECTS PAGE */
 .projects-grid {
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    /* per centrare le card */
     padding: 2rem 1rem;
 }
 
@@ -481,14 +479,12 @@ footer .footer-down {
     box-shadow: 0 0 10px 10px rgba(83, 48, 144, 0.42);
 }
 
-/* immagine a sinistra */
 .project-image {
     object-fit: cover;
     max-width: 200px;
     width: 40%;
 }
 
-/* contenuto a destra */
 .project-info {
     width: 55%;
     padding: 1.5rem;
