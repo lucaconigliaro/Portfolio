@@ -4,7 +4,7 @@ export default function Work() {
         {
             title: "GamesHub",
             description: "Games Hub è una Single Page Application progettata per offrire un'esperienza utente intuitiva e fluida nella consultazione e gestione di un catalogo di videogiochi. L'applicazione consente di esplorare, cercare, filtrare, confrontare e salvare giochi preferiti, il tutto in un’interfaccia moderna e reattiva.",
-            image: "/images/Gameslist.png",
+            image: "/images/Gamelist.jpg",
             tags: ["React", "TypeScript", "Tailwind", "React Router", "Context API", "LocalStorage"],
             liveDemo: "https://games-hub-rho.vercel.app/",
             github: "https://github.com/lucaconigliaro/GamesHub"
@@ -17,16 +17,9 @@ export default function Work() {
             github: "https://github.com/lucaconigliaro/TaskManager"
         },
         {
-            title: "Boolfix",
-            description: "Un’applicazione web avanzata per la gestione dei task, sviluppata con React, che consente agli utenti di creare, modificare, organizzare ed eliminare task con una UI intuitiva, prestazioni ottimizzate e funzionalità avanzate come filtri, ricerca ottimizzata e modali di conferma.",
-            image: "/images/todo.jpg",
-            tags: ["React", "JavaScript", "Bootstrap"],
-            github: "https://github.com/lucaconigliaro/react-boolflix"
-        },
-        {
             title: "Quick Notes",
             description: "Quick Notes è una semplice applicazione web per prendere appunti veloci. L’app permette di aggiungere, modificare ed eliminare note, con salvataggio locale tramite localStorage e supporto a tema chiaro/scuro.",
-            image: "/images/quicknotes.png",
+            image: "/images/quicknotes.jpg",
             tags: ["HTML5", "JavaScript", "CSS3"],
             liveDemo: "https://quick-notes-nine.vercel.app/",
             github: "https://github.com/lucaconigliaro/Quick-Notes"
@@ -34,7 +27,7 @@ export default function Work() {
         {
             title: "Retro Memory",
             description: "Una semplice implementazione del classico gioco Memory. L’obiettivo del gioco è mettere alla prova la memoria visiva del giocatore, abbinando tutte le coppie di carte identiche nel minor numero di errori possibile.",
-            image: "/images/retro.png",
+            image: "/images/retro.jpg",
             tags: ["HTML5", "JavaScript", "CSS3"],
             liveDemo: "https://retro-memory.vercel.app/",
             github: "https://github.com/lucaconigliaro/RetroMemory?tab=readme-ov-file"
@@ -61,7 +54,9 @@ export default function Work() {
                                 ))}
                             </div>
                             <div className="project-links">
-                                <a href={liveDemo} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                {liveDemo && (
+                                    <a href={liveDemo} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                                )}
                                 <a href={github} target="_blank" rel="noopener noreferrer">GitHub</a>
                             </div>
                         </div>

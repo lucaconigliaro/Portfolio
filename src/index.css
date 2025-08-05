@@ -446,18 +446,6 @@ footer .footer-down {
 }
 
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .about-columns {
-        flex-direction: column;
-    }
-
-    .about-image {
-        min-height: 250px;
-        border-radius: 0.5rem;
-    }
-}
-
 /*  PROJECTS PAGE */
 .projects-grid {
     display: flex;
@@ -534,23 +522,6 @@ footer .footer-down {
     color: #d1c4f7;
 }
 
-@media (max-width: 640px) {
-    .project-card {
-        flex-direction: column;
-    }
-
-    .project-image {
-        width: 100%;
-        max-width: 100%;
-        height: 200px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .project-info {
-        width: 100%;
-    }
-}
 
 /* KEYFRAMES */
 @keyframes float {
@@ -612,11 +583,6 @@ footer .footer-down {
         border-radius: 10%;
     }
 
-    main .dots {
-        justify-content: center;
-        padding-left: 0;
-    }
-
     .footer-up {
         align-items: center;
         text-align: center;
@@ -635,9 +601,12 @@ footer .footer-down {
         padding: 1rem 1.5rem;
         gap: 2rem;
         font-size: .8rem;
+        display: block;
     }
 
-    
+    .navbar .social-icons {
+        display: none;
+    }
 
     main .xp-Section::before {
         top: -120px;
@@ -675,7 +644,6 @@ footer .footer-down {
         font-size: 2.5rem;
     }
 
-
     main .tech-col {
         width: 30%;
     }
@@ -683,6 +651,31 @@ footer .footer-down {
     main .footer-up {
         text-align: center;
         gap: 1.5rem;
+    }
+
+    .about-columns {
+        flex-direction: column;
+    }
+
+    .about-image {
+        min-height: 250px;
+        border-radius: 0.5rem;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .project-info {
+        width: 100%;
     }
 }
 
@@ -769,5 +762,25 @@ footer .footer-down {
     main .tech-row {
         flex-direction: column;
         align-items: center;
+    }
+
+    .project-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 100%;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        border-radius: 0.5rem;
+    }
+
+    .project-info {
+        width: 100%;
+        text-align: center;
+        padding: 0 1rem;
     }
 }

@@ -1,10 +1,12 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
         <footer>
             {/* Prima riga */}
             <div className="footer-up">
                 <div>
-                    <p>Contattami</p>
+                    <Link to="contact">Contattami</Link>
                 </div>
 
                 <div>
