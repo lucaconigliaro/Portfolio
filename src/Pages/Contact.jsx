@@ -37,6 +37,7 @@ export default function Contact() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("ACCESS KEY:", import.meta.env.VITE_WEB3_ACCESS_KEY);
         const form = e.target;
         const formData = new FormData(form);
 
