@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <footer>
-            {/* Prima riga */}
             <div className="footer-up">
                 <div>
                     <Link to="contact">Contattami</Link>
@@ -31,9 +30,8 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Seconda riga */}
             <div className="footer-down">
-                <p>&copy; Luca Conigliaro 2025</p>            </div>
+                <p>&copy; Luca Conigliaro 2025</p></div>
         </footer>
     );
 }
