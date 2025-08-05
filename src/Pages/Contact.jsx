@@ -2,69 +2,69 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 
 export default function Contact() {
-  const [loading, setLoading] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
-  const validateForm = (formData) => {
-    const name = formData.get("name")?.trim();
-    const email = formData.get("email")?.trim();
-    const subject = formData.get("subject")?.trim();
-    const message = formData.get("message")?.trim();
+    const validateForm = (formData) => {
+        const name = formData.get("name")?.trim();
+        const email = formData.get("email")?.trim();
+        const subject = formData.get("subject")?.trim();
+        const message = formData.get("message")?.trim();
 
-    if (!name) {
-      toast.error("Inserisci il nome.", { position: "top-center", theme: "dark" });
-      return false;
-    }
+        if (!name) {
+            toast.error("Inserisci il nome.", { position: "top-center", theme: "dark" });
+            return false;
+        }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      toast.error("Inserisci una email valida.", { position: "top-center", theme: "dark" });
-      return false;
-    }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailRegex.test(email)) {
+            toast.error("Inserisci una email valida.", { position: "top-center", theme: "dark" });
+            return false;
+        }
 
-    if (!subject || subject.length < 3) {
-      toast.error("Inserisci un oggetto valido (almeno 3 caratteri).", { position: "top-center", theme: "dark" });
-      return false;
-    }
+        if (!subject || subject.length < 3) {
+            toast.error("Inserisci un oggetto valido (almeno 3 caratteri).", { position: "top-center", theme: "dark" });
+            return false;
+        }
 
-    if (!message || message.length < 10) {
-      toast.error("Il messaggio deve contenere almeno 10 caratteri.", { position: "top-center", theme: "dark" });
-      return false;
-    }
+        if (!message || message.length < 10) {
+            toast.error("Il messaggio deve contenere almeno 10 caratteri.", { position: "top-center", theme: "dark" });
+            return false;
+        }
 
-    return true;
-  };
+        return true;
+    };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
 
-    if (!validateForm(formData)) return;
+        if (!validateForm(formData)) return;
 
-    setLoading(true);
+        setLoading(true);
 
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+            });
 
-      const data = await res.json();
+            const data = await res.json();
 
-      if (data.success) {
-        form.reset();
-        setShowModal(true);
-        setTimeout(() => setShowModal(false), 4000);
-      } else {
-        toast.error(data.message || "Errore durante l'invio. Riprova.", { position: "top-center", theme: "dark" });
-      }
-    } catch {
-      toast.error("Errore di rete. Riprova più tardi.", { position: "top-center", theme: "dark" });
-    }
+            if (data.success) {
+                form.reset();
+                setShowModal(true);
+                setTimeout(() => setShowModal(false), 4000);
+            } else {
+                toast.error(data.message || "Errore durante l'invio. Riprova.", { position: "top-center", theme: "dark" });
+            }
+        } catch {
+            toast.error("Errore di rete. Riprova più tardi.", { position: "top-center", theme: "dark" });
+        }
 
-    setLoading(false);
-  };
+        setLoading(false);
+    };
     return (
         <>
             <div className="about-container">
