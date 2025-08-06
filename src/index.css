@@ -801,6 +801,7 @@ form button:hover {
 
     .project-card {
         flex-direction: column;
+        width: 400px;
     }
 
     .project-image {
