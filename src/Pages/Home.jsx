@@ -1,29 +1,36 @@
+import { motion } from "framer-motion";
 import FrontSection from "../Components/FrontSection";
-import Hero from "../Components/Hero";
 import StackSection from "../Components/StackSection";
+import Hero from "../Components/Hero";
 
 export default function Home() {
-    return (
-        <>
-            {/* Main */}
-            <main>
-                {/* 2 Hero section */}
-                <Hero />
+  const languages = ["JavaScript", "React", "Coffee"];
 
-                {/* 3 Esperienza e Carosello con i linguaggi che uso lato front */}
-                <FrontSection />
+  return (
+    <>
+      <main>
+        <Hero />
+        <FrontSection />
 
-                {/* Devo ancora rifletterci */}
-                <section className="language-section">
-                    <p>JavaScript</p>
-                    <p>React</p>
-                    <p>Coffee</p>
-                </section>
-
-                {/* 4 Sezione framework e librerie */}
-                <h2 className="stack-presentation">Le tecnologie che uso</h2>
-                <StackSection />
-            </main>
-        </>
-    );
+        <section
+          className="language-section"
+          style={{ display: "flex", gap: "1rem", justifyContent: "center" }}
+        >
+          {languages.map((lang, index) => (
+            <motion.p
+              key={lang}
+              initial={{ opacity: 0, x: index % 2 === 0 ? "-100vw" : "100vw" }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2, ease: "easeOut", delay: 1.2 + index * 0.2 , type: "spring", stiffness: 100 }}
+              whileHover={{ scale: 1.5 }}
+            >
+              {lang}
+            </motion.p>
+          ))}
+        </section>
+        <h2 className="stack-presentation">Le tecnologie che uso</h2>
+        <StackSection />
+      </main>
+    </>
+  );
 }

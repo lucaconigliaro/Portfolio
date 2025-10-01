@@ -4,12 +4,12 @@ import Footer from "../Components/Footer";
 import { ToastContainer } from "react-toastify";
 
 export default function DefaultLayout() {
-    return (
-        <div className="container">
-            <Navbar />
-            <Outlet />
-            <Footer />
-            <ToastContainer />
-        </div>
-    );
+  return (
+    <div className="container">
+      <Navbar />
+      <Outlet />
+      <Footer />
+      <ToastContainer />
+    </div>
+  );
 }

@@ -1,109 +1,85 @@
+import { motion } from "framer-motion";
+
 export default function StackSection() {
-    return (
-        <section className="full-width-breakout">
-            <div className="tech-container">
-                <div className="tech-row">
+  const cols = [
+    {
+      title: "Frontend Design",
+      items: [
+        { name: "React", src: "/logos/React.png" },
+        { name: "Vite", src: "/logos/Vite.svg" },
+        { name: "Figma", src: "/logos/Figma.png" },
+        { name: "Jest", src: "/logos/Jest.png" },
+        { name: "Bootstrap", src: "/logos/Bootstrap.png" },
+        { name: "Tailwind", src: "/logos/Tailwind.png" },
+      ],
+    },
+    {
+      title: "Linguaggi",
+      items: [
+        { name: "JavaScript", src: "/logos/JavaScript.white.png" },
+        { name: "TypeScript", src: "/logos/TypeScript.png" },
+      ],
+    },
+    {
+      title: "Deploy",
+      items: [
+        { name: "GitHub", src: "/logos/Group.png" },
+        { name: "Vercel", src: "/logos/Vercel.png" },
+      ],
+    },
+    {
+      title: "Back-end",
+      items: [
+        { name: "Node.js", src: "/logos/node.png" },
+        { name: "Express.js", src: "/logos/Express.webp" },
+        { name: "Postman", src: "/logos/Postman.webp" },
+        { name: "MySQL", src: "/logos/MySql2.png" },
+      ],
+    },
+    {
+      title: "Next Step",
+      items: [
+        { name: "PHP", src: "/logos/php.png" },
+        { name: "Laravel", src: "/logos/Laravel.png" },
+      ],
+    },
+  ];
 
-                    {/* Frontend Design */}
-                    <div className="tech-col">
-                        <h5>Frontend Design</h5>
-                        <ul>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/React.png" alt="React" /></div>
-                                <span>React</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Vite.svg" alt="Vite" /></div>
-                                <span>Vite</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Figma.png" alt="Figma" /></div>
-                                <span>Figma</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Jest.png" alt="Jest" /></div>
-                                <span>Jest</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Bootstrap.png" alt="Bootstrap" /></div>
-                                <span>Bootstrap</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Tailwind.png" alt="Tailwind" /></div>
-                                <span>Tailwind</span>
-                            </li>
-                        </ul>
-                    </div>
+  const colVariants = {
+    hiddenUp: { opacity: 0, y: -30 },
+    hiddenDown: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
 
-                    {/* Linguaggi */}
-                    <div className="tech-col">
-                        <h5>Linguaggi</h5>
-                        <ul>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/JavaScript.white.png" alt="JavaScript" /></div>
-                                <span>JavaScript</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/TypeScript.png" alt="TypeScript" /></div>
-                                <span>TypeScript</span>
-                            </li>
-                        </ul>
+  return (
+    <section className="full-width-breakout">
+      <div className="tech-container">
+        <div className="tech-row">
+          {cols.map((col, i) => (
+            <motion.div
+              className="tech-col"
+              key={col.title}
+              initial={i % 2 === 0 ? "hiddenUp" : "hiddenDown"}
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={colVariants}
+              transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
+            >
+              <h5>{col.title}</h5>
+              <ul>
+                {col.items.map((item) => (
+                  <li className="img-lang" key={item.name}>
+                    <div className="logo-wrapper">
+                      <img src={item.src} alt={item.name} />
                     </div>
-
-                    {/* DevOps */}
-                    <div className="tech-col">
-                        <h5>DevOps</h5>
-                        <ul>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/github-original.png" alt="GitHub" /></div>
-                                <span>GitHub</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Vercel.png" alt="Vercel" /></div>
-                                <span>Vercel</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Backend */}
-                    <div className="tech-col">
-                        <h5>Back-end</h5>
-                        <ul>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/node.png" alt="Node.js" /></div>
-                                <span>Node.js</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Express.webp" alt="Express.js" /></div>
-                                <span>Express.js</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Postman.webp" alt="Postman" /></div>
-                                <span>Postman</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/MySql2.png" alt="MySQL" /></div>
-                                <span>MySQL</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Next Step */}
-                    <div className="tech-col">
-                        <h5>Next Step</h5>
-                        <ul>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/php.png" alt="PHP" /></div>
-                                <span>PHP</span>
-                            </li>
-                            <li className="img-lang">
-                                <div className="logo-wrapper"><img src="/logos/Laravel.png" alt="Laravel" /></div>
-                                <span>Laravel</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+                    <span>{item.name}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }

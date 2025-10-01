@@ -1,13 +1,14 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import DefaultLayout from "./Layout/DefaultLayout"
-import Home from "./Pages/Home"
-import Contact from "./Pages/Contact"
-import Work from "./Pages/Work"
-import About from "./Pages/About"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DefaultLayout from "./Layout/DefaultLayout";
+import Home from "./Pages/Home";
+import Contact from "./Pages/Contact";
+import Work from "./Pages/Work";
+import About from "./Pages/About";
+import ScrollToTop from "./Components/ScrollToTop";
 function App() {
-
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path="/" element={<Home />} />
@@ -20,4 +21,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
