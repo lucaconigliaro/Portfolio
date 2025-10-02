@@ -13,8 +13,8 @@ export default function Contact() {
 
     if (!name) {
       toast.error("Inserisci il nome.", {
-        position: "top-center",
-        theme: "dark",
+        position: "bottom-right",
+        theme: "light",
       });
       return false;
     }
@@ -22,24 +22,24 @@ export default function Contact() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email || !emailRegex.test(email)) {
       toast.error("Inserisci una email valida.", {
-        position: "top-center",
-        theme: "dark",
+        position: "bottom-right",
+        theme: "light",
       });
       return false;
     }
 
     if (!subject || subject.length < 3) {
       toast.error("Inserisci un oggetto valido (almeno 3 caratteri).", {
-        position: "top-center",
-        theme: "dark",
+        position: "bottom-right",
+        theme: "light",
       });
       return false;
     }
 
     if (!message || message.length < 10) {
       toast.error("Il messaggio deve contenere almeno 10 caratteri.", {
-        position: "top-center",
-        theme: "dark",
+        pposition: "bottom-right",
+        theme: "light",
       });
       return false;
     }
@@ -87,7 +87,7 @@ export default function Contact() {
   return (
     <>
       <div className="about-container">
-        <p className="about-btn">contattami</p>
+        <h1 className="about-btn">Qui puoi contattarmi</h1>
       </div>
       <section className="contact">
         <form onSubmit={handleSubmit} noValidate>
