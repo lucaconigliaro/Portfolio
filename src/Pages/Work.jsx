@@ -5,7 +5,7 @@ export default function Work() {
     {
       title: "Travel Journal",
       description:
-        "Travel Journal permette di creare un diario di viaggio digitale...",
+        "Travel Journal permette di creare un diario di viaggio digitale e filtrare i tuoi ricordi...",
       image: "/images/travel.png",
       tags: ["React", "JavaScript", "Tailwind", "React Router", "Context API", "Leaflet", "Supabase"],
       liveDemo: "https://travel-journal-app-two.vercel.app/",
@@ -23,7 +23,7 @@ export default function Work() {
     {
       title: "Task Manager",
       description:
-        "Un'applicazione web avanzata per la gestione dei task...",
+        "Un’applicazione web avanzata per la gestione dei task che consente agli utenti di creare, modificare, organizzare ed eliminare task e funzionalità avanzate.",
       image: "/images/task.png",
       tags: ["React", "JavaScript", "Bootstrap", "Context API"],
       github: "https://github.com/lucaconigliaro/TaskManager",
@@ -31,7 +31,7 @@ export default function Work() {
     {
       title: "Quick Notes",
       description:
-        "Quick Notes è una semplice applicazione web per prendere appunti veloci...",
+        "Una semplice applicazione web per prendere appunti veloci. L’app permette di aggiungere, modificare ed eliminare note, con salvataggio locale tramite localStorage e supporto a tema chiaro/scuro.",
       image: "/images/quicknotes.jpg",
       tags: ["HTML5", "JavaScript", "CSS3"],
       liveDemo: "https://quick-notes-nine.vercel.app/",
@@ -40,7 +40,7 @@ export default function Work() {
     {
       title: "Retro Memory",
       description:
-        "Una semplice implementazione del classico gioco Memory...",
+        "Il classico Memory dove l’obiettivo del gioco è mettere alla prova la memoria visiva del giocatore, abbinando tutte le coppie di carte identiche nel minor numero di errori possibile.",
       image: "/images/retro.jpg",
       tags: ["HTML5", "JavaScript", "CSS3"],
       liveDemo: "https://retro-memory.vercel.app/",
