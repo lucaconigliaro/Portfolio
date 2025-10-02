@@ -234,8 +234,7 @@ main .presentation-section .presentation-links {
   padding: 10px;
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   justify-content: center;
 }
 
@@ -1037,6 +1036,7 @@ form button:hover {
   main .presentation-links {
     align-items: center;
   }
+  
 
   .carousel-container h1 {
     display: none;
