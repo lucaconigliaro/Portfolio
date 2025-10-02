@@ -4,18 +4,15 @@ export default function Footer() {
   const socials = [
     {
       href: "https://github.com/lucaconigliaro",
-      src: "/logos/Group.png",
-      alt: "GitHub",
+      label: "GitHub",
     },
     {
       href: "https://www.linkedin.com/in/luca-conigliaro-5636b1352/",
-      src: "/logos/linkedin-plain.png",
-      alt: "LinkedIn",
+      label: "LinkedIn",
     },
     {
       href: "mailto:lucaconigliaro1@gmail.com",
-      src: "/logos/Group2.svg",
-      alt: "Gmail",
+      label: "Gmail",
     },
   ];
 
@@ -36,9 +33,13 @@ export default function Footer() {
                   rel={
                     social.href.startsWith("http") ? "noopener noreferrer" : ""
                   }
+                  className="social-text"
                 >
-                  <img src={social.src} alt={social.alt} />
+                  {social.label}
                 </a>
+                {index < socials.length - 1 && (
+                  <span className="separator"> - </span>
+                )}
               </li>
             ))}
           </ul>
