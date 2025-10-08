@@ -6,7 +6,7 @@ export default function About() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 }, // ogni figlio entra dopo 0.2s
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -18,7 +18,6 @@ export default function About() {
   return (
     <section className="about-section">
       <div className="about-container">
-        {/* Titolo animato */}
         <motion.h1
           className="about-btn"
           initial={{ opacity: 0, y: -30 }}
@@ -30,7 +29,6 @@ export default function About() {
       </div>
 
       <div className="about-columns">
-        {/* Colonna testo animata con stagger */}
         <motion.div
           className="about-me"
           variants={containerVariants}
@@ -81,12 +79,6 @@ export default function About() {
           </motion.p>
 
           <motion.p variants={itemVariants}>
-            Questo nuovo capitolo della mia vita non sarebbe cominciato senza il
-            sostegno di chi ha creduto in me: in particolare la mia compagna, la
-            persona che mi ha incoraggiato a compiere questo salto importante.
-          </motion.p>
-
-          <motion.p variants={itemVariants}>
             Sono convinto che il confronto e la collaborazione con le persone
             siano una delle più grandi fonti di ispirazione. Ogni relazione è
             un’occasione per imparare e, allo stesso tempo, per lasciare un
@@ -94,10 +86,9 @@ export default function About() {
           </motion.p>
         </motion.div>
 
-        {/* Colonna immagine animata */}
         <motion.img
           className="about-image"
-          src="/images/profile.jpg"   // <-- cambia con il tuo percorso
+          src="/images/profile.jpg"
           alt="Luca Conigliaro"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +97,6 @@ export default function About() {
         />
       </div>
 
-      {/* Riassunto breve animato */}
       <motion.div
         className="short"
         initial={{ opacity: 0, y: 40 }}
@@ -124,9 +114,7 @@ export default function About() {
             - Specializzato in React e JavaScript, con attenzione al codice
             pulito
           </li>
-          <li>
-            - In crescita sul backend: motivato ad ampliare le competenze
-          </li>
+          <li>- In crescita sul backend: motivato ad ampliare le competenze</li>
           <li>
             - Aperto a stage, tirocini, apprendistato o ruoli junior — su Roma o
             da remoto
