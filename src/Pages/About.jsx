@@ -79,6 +79,12 @@ export default function About() {
           </motion.p>
 
           <motion.p variants={itemVariants}>
+            Questo nuovo capitolo della mia vita non sarebbe cominciato senza il
+            sostegno di chi ha creduto in me: in particolare la mia compagna, la
+            persona che mi ha incoraggiato a compiere questo salto importante.
+          </motion.p>
+
+          <motion.p variants={itemVariants}>
             Sono convinto che il confronto e la collaborazione con le persone
             siano una delle più grandi fonti di ispirazione. Ogni relazione è
             un’occasione per imparare e, allo stesso tempo, per lasciare un
