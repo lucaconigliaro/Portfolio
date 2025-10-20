@@ -121,10 +121,7 @@ export default function About() {
             pulito
           </li>
           <li>- In crescita sul backend: motivato ad ampliare le competenze</li>
-          <li>
-            - Aperto a stage, tirocini, apprendistato o ruoli junior — su Roma o
-            da remoto
-          </li>
+          <li>- Aperto a stage, tirocini, apprendistato o ruoli junior.</li>
         </ul>
         <p className="trust">
           Se credi nel mio percorso, sarò felice di conoscerti!
